@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include<stdio.h>
+int main()
+{
+    void function1()		//can define outside main function.
+    {
+        int a=10; //local var
+        static int b=10;  //static var
+        a=a+1;
+        b=b+1;
+        printf("a=%db=%d\n",a,b);
+    }
+    function1();
+    function1();
+    function1();
+    return 0;
+}
+
+o/p
+------------
+a=11b=11
+a=11b=12
+a=11b=13
