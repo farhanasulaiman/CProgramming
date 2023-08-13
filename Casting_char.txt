@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  //int n;
+  char c;
+  printf("enter a character\n");
+  scanf("%c",&c);
+ if(isdigit(c))
+ printf("input is digit\n%c",(int)c);
+ else
+ printf("input is character\n%c",c);
+   return 0;
+}
+
+
+o/p
+--------
+
+enter a character			
+M				 
+input is character
+M
+
+
+or
+
+enter a character
+8
+input is digit
+8
