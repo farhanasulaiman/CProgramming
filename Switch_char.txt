@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+  //int n;
+  char c;
+  printf("enter a character\n");
+  scanf("%c",&c);
+  if(isupper(c))
+    c=tolower(c);
+  switch(c)
+  {
+      
+      case 'm':
+        printf("Monday");
+        break;
+      case 't':
+        printf("Tuesday");
+        break;
+     case 'w':
+        printf("Wednesday");
+        break;
+     case 'u':
+        printf("Thursdaty");
+        break;
+    case 'f':
+        printf("Friday");
+        break;
+    case 's':
+        printf("Saturday");
+        break;
+    case 'n':
+        printf("sunday");
+        break;
+    default:
+        printf("invalid day");
+  }
+   return 0;
+}
+
+
+
+o/p
+-------------
+enter a character
+S
+Saturday
