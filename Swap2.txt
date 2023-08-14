@@ -1,0 +1,28 @@
+#include <stdio.h>
+void swap();
+int main()
+{
+    swap();
+}
+void swap()
+{
+    int a,b;
+    printf("a= ");
+    scanf("%d",&a);
+    printf("b= ");
+    scanf("%d",&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("After swapping\n");
+    printf("a= %d\nb= %d",a,b);
+}
+
+
+o/p
+---------
+a= 20
+b= 30
+After swapping
+a= 30
+b=20
