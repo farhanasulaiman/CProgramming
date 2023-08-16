@@ -1,0 +1,38 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int size;
+    char names[10][10];
+    printf("enter the size\n");
+    scanf("%d",&size);
+    printf("enter the names:\n");
+    for(int i=0;i<size;i++)
+    {
+      scanf("%s",&names[i]);
+    }
+    printf("array elemnents are:\n");
+    for(int j=0;j<size;j++)
+    {
+        printf("name[%d]=%s\n",j,names[j]);
+    }
+    return 0;
+}
+
+
+o/p
+---------
+enter the size
+5
+enter the names:
+abc
+geg
+jhj
+uuu
+bbg
+array elemnents are:
+name[0]=abc
+name[1]=geg
+name[2]=jhj
+name[3]=uuu
+name[4]=bbg
