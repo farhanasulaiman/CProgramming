@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void sum(int a,int b);
+int main() {
+    int a=20,b=30;
+    printf("Before function call:\na=%d\tb=%d\n",a,b);
+    swap(a,b);                                  //call by value
+    printf("After function call:\na=%d\tb=%d",a,b);
+    return 0;                       //main function carries no value
+}
+void swap(int a,int b)
+{
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swapping:\na=%d\tb=%d\n",a,b);
+}
+
+o/p
+-------
+Before function call:
+a=20	b=30
+After swapping:
+a=30	b=20
+After function call:
+a=20	b=30
