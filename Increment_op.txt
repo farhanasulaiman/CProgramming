@@ -4,9 +4,9 @@
 int main() {
     int x=1,y;
     y=++x;  //increment first & then assign value
-    printf("prefix increment x= %d\t y=%d\n",x,y);
-    y=++x;  //assign value and then increment
-    printf("postfix increment x= %d\t y=%d\n",x,y);
+    printf("prefix increment\n x= %d\t y=%d\n",x,y);
+    y=x++;  //assign value and then increment
+    printf("postfix increment\n x= %d\t y=%d\n",x,y);
     
     return 0;
 }
@@ -14,5 +14,7 @@ int main() {
 
 o/p
 -----
-x=2y=2
-x=2y=3
+prefix increment
+ x= 2	 y=2
+postfix increment
+ x= 3	 y=2
