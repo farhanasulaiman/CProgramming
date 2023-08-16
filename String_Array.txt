@@ -1,0 +1,20 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    char names[3][5]={"aaa","bbb","ccc"};
+    printf("array elements are:\n");
+    for (int i=0;i<3;i++)
+    {
+           printf("names[%d]=%s\n",i,names[i]);
+    }
+    return 0;
+}
+
+
+o/p
+----------
+array elements are:
+names[0]=aaa
+names[1]=bbb
+names[2]=ccc
