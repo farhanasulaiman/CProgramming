@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int sum();
+int main() {
+    int d;
+    d=sum();
+    printf("a+b=%d",d);
+    return 0;                       //main function carries no value
+}
+int sum()                           //function with return type
+{
+    int a=30,b=40,sum;
+    sum=a+b;
+    printf("a=%d\nb=%d\n",a,b);
+    return sum;
+}
+
+
+o/p
+------------
+a=30
+b=40
+a+b=70
