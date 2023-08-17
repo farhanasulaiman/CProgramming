@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int larg,sec_larg;
+    int marks[4]={56,78,98,45};
+    larg=marks[0];
+    sec_larg=marks[1];
+    for(int i=0;i<4;i++)
+    {
+        if(marks[i]>larg)
+        {
+            sec_larg=larg;
+            larg=marks[i];
+        }
+        else
+        {
+            if(marks[i]>sec_larg && marks[i]!=larg)
+            {
+                sec_larg=marks[i];
+            }
+        }
+    }
+    printf("largest= %d\nsecond largest= %d",larg,sec_larg);
+   return 0;
+}
+
+
+o/p
+---------
+largest= 98
+second largest= 78
