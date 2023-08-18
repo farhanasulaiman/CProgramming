@@ -1,0 +1,22 @@
+int main() {
+    int num,i=1,dup,temp,res;
+    printf("enter the number");
+    scanf("%d",&num);
+    dup=num;
+    while(num!=0)
+    {
+        temp=num%10;
+        res=res+(temp*temp*temp);
+        num=num/10;
+    }
+    if(res==dup)
+    printf("is amstrong");
+    else
+    printf("is not amstrong");
+    return 0;
+}
+
+o/p
+------
+enter the number153
+is amstrong
