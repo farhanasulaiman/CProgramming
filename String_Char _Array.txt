@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    char c[5]={'a','b','c','d','\0'};
+    char msg[]="good morning";
+    printf("String is: %s\n",msg);
+    printf("Character Array is:\n");
+    for(int i=0;i<5;i++)
+    {
+       printf("%c",c[i]);
+    }
+    return 0;
+}
+
+
+o/p
+--------
+String is: good morning
+Character Array is:
+abcd.
