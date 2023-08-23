@@ -1,0 +1,39 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int insert_end(int,int,int[],int);
+int main() {
+    int a[20]={12,45,57,78,89};
+    int n,capacity,key;
+    capacity=sizeof(a)/sizeof(a[0]);                //actual array capacity
+    n=5;                                            //current array size
+    printf("enter the key to be inserted:");
+    scanf("%d",&key);
+    printf("Array before insertion:");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    n=insert_end(n,capacity,a,key);
+    printf("\nArray after insertion:");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+int insert_end(int n,int capacity,int a[],int key)
+{
+    if(n>=capacity)                     //checks if current array size is >= capacity then
+                                        //return the current size
+        return n;
+    a[n]=key;
+    return n+1;
+}
+
+
+
+o/p
+-----------
+enter the key to be inserted:56
+Array before insertion:12 45 57 78 89 
+Array after insertion:12 45 57 78 89 56 
