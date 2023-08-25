@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int insert_sorted(int [],int,int,int);
+int main() {
+    int a[20]={10,24,35,46,78};
+    int n,key,capacity;
+    n=5;
+    key=11;
+    capacity=sizeof(a)/sizeof(a[0]);
+    
+    printf("before insertion\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    n=insert_sorted(a,capacity,n,key);
+    
+    printf("\nafter insertion\n");
+    for(int j=0;j<n;j++)
+    {
+        printf("%d ",a[j]);
+    }
+    return 0;
+}
+int insert_sorted(int a[],int capacity,int n,int key)
+{
+    int i;
+    if(n>=capacity)
+    {
+        return n;
+    }
+    for( i=n-1;i>=0 && a[i]>key ;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[i+1]=key;
+    return n+1;
+}
+
+
+o/p
+--------
+before insertion
+10 24 35 46 78 
+after insertion
+10 11 24 35 46 78 

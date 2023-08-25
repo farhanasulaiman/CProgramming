@@ -1,0 +1,35 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a[]={12,45,57,78,89};
+    int n,key,left,mid,right;
+    n=sizeof(a)/sizeof(a[0]);
+    left=0;
+    right=n-1;
+    printf("Enter the key:");
+    scanf("%d",&key);
+    while(left<=right)
+    {
+        mid=(left+right)/2;
+        if(a[mid]==key)
+        {
+            printf("%d is at position %d",key,mid+1);
+            break;
+        }
+        else if(a[mid]>key)
+            right=mid-1;
+        else
+            left=mid+1;
+    }
+    if(left>right)
+        printf("%d not found",key);
+    return 0;
+}
+
+
+
+o/p
+---------
+Enter the key:45
+45 is at position 2
