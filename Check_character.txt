@@ -1,0 +1,28 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   char str[]="hello world";
+   char *ptr,c;
+   int count=0;
+   printf("enter the character to be checked: ");
+   scanf("%c",&c);
+   ptr=&str;
+   while(*ptr!='\0')
+   {
+       if(c>='A' && c<='Z')
+            c=c+32;
+       if(*ptr==c)
+          count++;
+       ptr++;
+   }
+   printf("No. of %c's in string : %d",c,count);
+   return 0;
+}
+
+
+
+o/p
+-----------
+enter the character to be checked: L
+No. of l's in string : 3
