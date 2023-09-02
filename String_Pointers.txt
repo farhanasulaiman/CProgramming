@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   char str[]="I am Farhana";
+   char *ptr;
+   ptr=&str;                        //stores the base address of str in ptr.
+   while(*ptr!='\0')
+   {
+       printf("%c\n",*ptr);
+       ptr++;
+   }
+    return 0;
+}
+
+
+
+o/p
+---------
+I
+ 
+a
+m
+ 
+F
+a
+r
+h
+a
+n
+a
