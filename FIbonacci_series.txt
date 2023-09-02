@@ -1,0 +1,29 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    int lim,res=0,first,sec;
+    printf("enter the limit: ");
+    scanf("%d",&lim);
+    first=1;
+    sec=1;
+    printf("fibonacci series upto %d are:\n%d %d ",lim,first,sec);
+    for(int i=3;i<=lim;i++)
+    {
+        res=first+sec;
+        first=sec;
+        sec=res;
+        printf("%d ",res);
+    }
+    
+    return 0;
+}
+
+
+
+o/p
+-----------
+enter the limit: 6
+fibonacci series upto 6 are:
+1 1 2 3 5 8 
