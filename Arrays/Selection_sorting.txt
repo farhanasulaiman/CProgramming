@@ -1,0 +1,48 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a[]={11,4,15,10,24,7,10},i,j,n,temp,mid_index;
+    n=sizeof(a)/sizeof(a[0]);
+    
+    printf("before sorting\n");
+    for(int k=0;k<n;k++)
+    {
+        printf("%d ",a[k]);
+    }
+     
+    for(i=0;i<n;i++)
+    {
+        mid_index=i;
+        for(j=i+1;j<n;j++)
+        {
+           if(a[j]<a[mid_index])
+           {
+               mid_index=j;
+           }
+        }
+            if(mid_index!=i)
+            {
+                temp=a[mid_index];
+                a[mid_index]=a[i];
+                a[i]=temp;
+            }
+        
+    }
+    
+    printf("\nAfter selection sort\n");
+    for(int k=0;k<n;k++)
+    {
+        printf("%d ",a[k]);
+    }
+    return 0;
+}
+
+
+
+o/p
+-----------
+before sorting
+11 4 15 10 24 7 10 
+After selection sort
+4 7 10 10 11 15 24 

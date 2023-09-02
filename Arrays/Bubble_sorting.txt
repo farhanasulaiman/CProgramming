@@ -1,0 +1,41 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int i,j,temp,n,a[]={20,15,34,27,5,13,8};
+   n=sizeof(a)/sizeof(a[0]);
+   
+   printf("before sorting\n");
+   for(int k=0;k<n;k++)
+   {
+       printf("%d ",a[k]);
+   }
+   
+   for(i=0;i<n-1;i++)                   //iterate in each pass
+   {
+       for(j=0;j<n-i-1;j++)             //check for each element>next element
+       {
+           if(a[j]>a[j+1])
+           {
+               temp=a[j];
+               a[j]=a[j+1];
+               a[j+1]=temp;
+           }
+       }
+   }
+   
+   printf("\nafter bubble sort\n");
+   for(int k=0;k<n;k++)
+   {
+       printf("%d ",a[k]);
+   }
+    return 0;
+}
+
+
+o/p
+----------
+before sorting
+20 15 34 27 5 13 8 
+after bubble sort
+5 8 13 15 20 27 34 

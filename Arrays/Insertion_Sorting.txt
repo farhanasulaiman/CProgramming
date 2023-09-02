@@ -1,0 +1,36 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int i,j,key,n,a[]={45,100,25,87,45,33,10};
+    n=sizeof(a)/sizeof(a[0]);
+    
+    printf("Before sorting\n");
+    for(int k=0;k<n;k++)
+    {
+        printf("%d ",a[k]);
+    }
+    printf("\nAfter insertion sort\n");
+    for(i=1;i<n;i++)
+    {
+        key=a[i];
+        for(j=i-1;j>=0 && a[j]>key;j--)
+        {
+            a[j+1]=a[j];
+        }
+        a[j+1]=key;
+    }
+    for(int k=0;k<n;k++)
+    {
+        printf("%d ",a[k]);
+    }
+    return 0;
+}
+
+
+o/p
+---------
+Before sorting
+45 100 25 87 45 33 10 
+After insertion sort
+10 25 33 45 45 87 100 
