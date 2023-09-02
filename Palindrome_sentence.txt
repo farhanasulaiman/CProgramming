@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+   char str[20];
+   int l,h;
+   printf("Enter the string: ");
+   scanf("%[^\n]s",&str);
+   
+   h=strlen(str)-1;
+   for(l=0;l<h;l++)
+   {
+       if(str[l]>='A' && str[l]<='Z')
+            str[l]=str[l]+32;
+   }
+   l=0;
+   while(l<h)
+   {
+       if(str[l]!=str[h])
+       {
+           if(str[l]==' ')
+                l++;
+            else if(str[h]==' ')
+                h--;
+            else
+            {
+                printf("not palindrome");
+                return 0;
+            }
+          //return 0;
+       }
+       l++;
+       h--;
+      
+   }
+   printf("palindrome");
+    return 0;
+}
+
+
+o/p
+--------
+Enter the string: do geese see god
+palindrome
